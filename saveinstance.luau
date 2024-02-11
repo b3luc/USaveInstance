@@ -1,6 +1,6 @@
 --!native
 local Params = {
-	RepoURL = "https://raw.githubusercontent.com/luau/SomeHub/main/",
+	RepoURL = "https://github.com/b3luc/USaveInstance/main/",
 	UMF = "UniversalMethodFinder",
 	ROM = "RequireOnlineModule",
 }
