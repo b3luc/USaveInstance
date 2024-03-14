@@ -1,6 +1,6 @@
 --!native
 local Params = {
-	RepoURL = "https://github.com/b3luc/USaveInstance/main/",
+	RepoURL = "https://raw.githubusercontent.com/luau/SomeHub/main/",
 	UMF = "UniversalMethodFinder",
 	ROM = "RequireOnlineModule",
 }
@@ -14,8 +14,6 @@ finder({
 	gethui = '(...):find("get",nil,true) and (...):find("h",nil,true) and (...):find("ui",nil,true)',
 	getnilinstances = '(...):find("nil",nil,true)', -- ! Could match some unwanted stuff
 	getproperties = '(...):find("get",nil,true) and (...):find("prop",nil,true) and (...):sub(#...) == "s"',
-	getspecialinfo = '(...):find("get",nil,true) and (...):find("spec",nil,true)',
-	protectgui = '(...):find("protect",nil,true) and (...):find("ui",nil,true) and not (...):find("un",nil,true)',
 	writefile = '(...):find("file",nil,true) and (...):find("write",nil,true)',
 }, true)
 
