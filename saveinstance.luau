@@ -422,11 +422,6 @@ end
 local function ReadProperty(Property, instance, PropertyName, specialProperties, Special)
 	local raw
 	if Special then
-		if specialProperties == nil and getspecialinfo then
-			specialProperties = getspecialinfo(instance)
-			raw = specialProperties[PropertyName]
-		end
-
 		if raw == nil then
 			local ok, result = pcall(gethiddenproperty, instance, PropertyName)
 
@@ -450,11 +445,6 @@ local function ReadProperty(Property, instance, PropertyName, specialProperties,
 			if ok then
 				raw = result
 			else
-				if specialProperties == nil and getspecialinfo then
-					specialProperties = getspecialinfo(instance)
-					raw = specialProperties[PropertyName]
-				end
-
 				if raw == nil then
 					ok, result = pcall(gethiddenproperty, instance, PropertyName)
 
