@@ -390,22 +390,7 @@ do
 end
 
 if getproperties then
-	if globalcontainer.getspecialinfo then
-		local getreal = globalcontainer.getspecialinfo
-
-		globalcontainer.getspecialinfo = function(instance)
-			local specialinfo = getproperties(instance)
-
-			local ok, result = pcall(getreal, instance) -- * Some executors only allow certain Classes for this method (like UnionOperation, MeshPart, Terrain), for example Electron
-			if ok then
-				for Property, Value in result do
-					specialinfo[Property] = Value
-				end
-			end
-
-			return specialinfo
-		end
-	else
+	if not globalcontainer.getspecialinfo then
 		globalcontainer.getspecialinfo = getproperties
 	end
 end
