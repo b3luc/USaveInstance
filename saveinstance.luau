@@ -389,14 +389,6 @@ do
 	end
 end
 
-if getproperties then
-	if not globalcontainer.getspecialinfo then
-		globalcontainer.getspecialinfo = getproperties
-	end
-end
-
-local getspecialinfo = globalcontainer.getspecialinfo
-
 local function getsafeproperty(instance, PropertyName)
 	return instance[PropertyName]
 end
